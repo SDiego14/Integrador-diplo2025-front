@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carousel-item img {
+    border: none !important; /* Quitamos el borde verde solo aquí para que se vea moderno */
+    border-radius: 12px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #24381b; /* Usamos tu verde Continental para las flechas */
+    border-radius: 50%;
+    padding: 20px;
+}

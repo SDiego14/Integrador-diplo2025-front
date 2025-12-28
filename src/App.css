@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+/* Paleta de Colores: 
+   Verde Oscuro: #24381b
+   Verde Fondo: #eaf2e3
+   Dorado Detalle: #c5a059
+*/
+
+body {
+    background-color: #eaf2e3;
+    color: #24381b;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Tipografía y Textos */
+.p1 {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.div1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 40px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.div1 h1, .div1 h2 {
+    font-style: italic;
+    color: #24381b;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navegación Moderna */
+nav {
+    background-color: #010201;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background-color: #c5a059; /* Cambio a dorado para combinar mejor */
+    color: #fff;
+}
+
+/* Imágenes con Estilo Hotelero */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    border: 4px solid #24381b;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Secciones de Quiénes Somos */
+.quienesSomosTitulos h2 {
+    color: #24381b;
+    border-bottom: 3px solid #c5a059; /* Subrayado dorado */
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+/* Footer Profesional */
+.footer {
+    background-color: #24381b;
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    border-top: 4px solid #c5a059;
+    text-align: center;
+}
+
+.footer h6 {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Utilidades */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mt-5 { margin-top: 3rem; }
+
+.carousel {
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    overflow: hidden; /* Para que las imágenes respeten el borde redondeado */
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover; /* Evita que la imagen se estire feo */
+}
+
+/* Estilo para los enlaces del menú */
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: all 0.3s ease; /* Hace que el cambio sea suave */
+    border-bottom: 2px solid transparent;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* Efecto al pasar el ratón */
+.navbar-nav .nav-link:hover {
+    color: #4c6643 !important; /* El verde de tu temática */
+    border-bottom: 2px solid #4c6643;
+    transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+}
+
+/* Estilo para la opción que está activa */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #4c6643 !important;
+}
+
+/* Asegúrate de que este archivo esté importado en Reservas.js */
+
+.servicio-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px; /* Espacio extra para que se vea el reflejo */
+}
+
+.reflejo-icono {
+    font-size: 2.8rem;
+    color: #4c6643;
+    display: inline-block; /* Crucial para que el reflejo funcione */
+    transition: all 0.4s ease;
+    
+    /* Propiedad de reflejo para Chrome/Edge/Safari */
+    -webkit-box-reflect: below -8px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+}
+
+/* Efecto Hover: Cambia a dorado y sube */
+.servicio-col:hover .reflejo-icono {
+    transform: translateY(-10px);
+    color: #d4af37 !important;
+}
+
+.servicio-col:hover p {
+    color: #d4af37;
+    transition: 0.3s;
 }
